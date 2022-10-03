@@ -50,6 +50,7 @@ function crefila_setup() {
 	register_nav_menus(
 		array(
 			'menu-1' => esc_html__( 'Primary', 'crefila' ),
+			'ico_menu-1' => esc_html__( 'Icons Menu', 'crefila' )
 		)
 	);
 
@@ -134,20 +135,17 @@ function crefila_widgets_init() {
 }
 add_action( 'widgets_init', 'crefila_widgets_init' );
 
-/**
- * Enqueue scripts and styles.
- */
-function crefila_scripts() {
-	wp_enqueue_style( 'crefila-style', get_stylesheet_uri(), array(), _S_VERSION );
-	wp_style_add_data( 'crefila-style', 'rtl', 'replace' );
-
-	wp_enqueue_script( 'crefila-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
-
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
+function add_additional_class_on_li($classes, $item, $args) {
+    if(isset($args->add_li_class)) {
+        $classes[] = $args->add_li_class;
+    }
+    return $classes;
 }
-add_action( 'wp_enqueue_scripts', 'crefila_scripts' );
+add_filter('nav_menu_css_class', 'add_additional_class_on_li', 1, 3);
+
+
+require get_template_directory().'/inc/enqueue.php';
+require get_template_directory().'/classes/MenuWalkers.php';
 
 /**
  * Implement the Custom Header feature.

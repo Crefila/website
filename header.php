@@ -25,35 +25,58 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'crefila' ); ?></a>
 
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+	<header id="masthead" class="site-header  ">
+		<div class="flex w-full items-center p-8 px-24">
+			<div class="site-branding w-5% ml-6">
 				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$crefila_description = get_bloginfo( 'description', 'display' );
-			if ( $crefila_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $crefila_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
+				the_custom_logo();
+				if ( is_front_page() && is_home() ) :
+					?>
+					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+					<?php
+				else :
+					?>
+					<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+					<?php
+				endif;
+				$crefila_description = get_bloginfo( 'description', 'display' );
+				if ( $crefila_description || is_customize_preview() ) :
+					?>
+					<p class="site-description"><?php echo $crefila_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
+				<?php endif; ?>
+			</div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'crefila' ); ?></button>
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				)
-			);
-			?>
-		</nav><!-- #site-navigation -->
+			<div class="icon-nav w-30% ml-9">
+				<?php wp_nav_menu(
+					array(
+						'theme_location' => 'ico_menu-1',
+						'walker' => new Walker_Social_Menu(),
+						'container' => 'ul',
+						'menu_class' => 'social-icons flex',
+					)
+				);?>
+			</div>
+
+			<nav id="site-navigation" class="main-navigation w-60%">
+				<button class="menu-toggle md:hidden" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'crefila' ); ?></button>
+				<?php
+					wp_nav_menu(
+						array(
+							'theme_location' => 'menu-1',
+							'walker'	=>	new Walker_Main_Menu(),
+							'menu_id'  => 'primary-menu',
+							'menu_class' => 'flex',
+							'add_li_class' => 'nav-item mr-11'
+						)
+					);
+				?>
+			</nav><!-- #site-navigation -->
+
+			<div class="flex w-5% mr-6 justify-end">
+				<p>$0.00</p>
+				<span class="ml-2">
+					<i class="cre-cart"></i>
+				</span>
+			</div>
+		</div>
 	</header><!-- #masthead -->
