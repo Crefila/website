@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'Helvetica-Bold';
+    src: url('./Helvetica-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Helevitica';
+    src: url('./Helvetica.ttf');
+}
+
+@font-face {
+    font-family: 'Helevitica Bold Rounded';
+    src: url('./helvetica-rounded-bold-5871d05ead8de.otf');
+}

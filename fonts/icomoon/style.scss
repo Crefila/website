@@ -1,0 +1,135 @@
+@import "variables";
+
+@font-face {
+  font-family: '#{$icomoon-font-family}';
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?a243ql');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?a243ql#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?a243ql') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?a243ql') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?a243ql##{$icomoon-font-family}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+i {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: '#{$icomoon-font-family}' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.cre-cart {
+  &:before {
+    content: $cre-cart; 
+  }
+}
+.cre-bluetooth {
+  &:before {
+    content: $cre-bluetooth; 
+  }
+}
+.cre-search {
+  &:before {
+    content: $cre-search; 
+  }
+}
+.cre-pause {
+  &:before {
+    content: $cre-pause; 
+  }
+}
+.cre-play {
+  &:before {
+    content: $cre-play; 
+  }
+}
+.cre-play-outline {
+  &:before {
+    content: $cre-play-outline; 
+  }
+}
+.cre-replay {
+  &:before {
+    content: $cre-replay; 
+  }
+}
+.cre-replay_10 {
+  &:before {
+    content: $cre-replay_10; 
+  }
+}
+.cre-replay_30 {
+  &:before {
+    content: $cre-replay_30; 
+  }
+}
+.cre-stop {
+  &:before {
+    content: $cre-stop; 
+  }
+}
+.cre-library {
+  &:before {
+    content: $cre-library; 
+  }
+}
+.cre-snapchat {
+  &:before {
+    content: $cre-snapchat; 
+  }
+}
+.cre-home {
+  &:before {
+    content: $cre-home; 
+  }
+}
+.cre-tiktok {
+  &:before {
+    content: $cre-tiktok; 
+  }
+}
+.cre-headphones {
+  &:before {
+    content: $cre-headphones; 
+  }
+}
+.cre-ellipsis-h {
+  &:before {
+    content: $cre-ellipsis-h; 
+  }
+}
+.cre-ellipsis-v {
+  &:before {
+    content: $cre-ellipsis-v; 
+  }
+}
+.cre-facebook {
+  &:before {
+    content: $cre-facebook; 
+  }
+}
+.cre-instagram {
+  &:before {
+    content: $cre-instagram; 
+  }
+}
+.cre-twitter {
+  &:before {
+    content: $cre-twitter; 
+  }
+}
+.cre-youtube {
+  &:before {
+    content: $cre-youtube; 
+  }
+}
+

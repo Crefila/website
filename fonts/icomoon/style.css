@@ -1,0 +1,90 @@
+@font-face {
+  font-family: 'crefila';
+  src:  url('fonts/crefila.eot?a243ql');
+  src:  url('fonts/crefila.eot?a243ql#iefix') format('embedded-opentype'),
+    url('fonts/crefila.ttf?a243ql') format('truetype'),
+    url('fonts/crefila.woff?a243ql') format('woff'),
+    url('fonts/crefila.svg?a243ql#crefila') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+i {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'crefila' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.cre-cart:before {
+  content: "\e900";
+}
+.cre-bluetooth:before {
+  content: "\e901";
+}
+.cre-search:before {
+  content: "\e902";
+}
+.cre-pause:before {
+  content: "\e903";
+}
+.cre-play:before {
+  content: "\e904";
+}
+.cre-play-outline:before {
+  content: "\e905";
+}
+.cre-replay:before {
+  content: "\e906";
+}
+.cre-replay_10:before {
+  content: "\e907";
+}
+.cre-replay_30:before {
+  content: "\e908";
+}
+.cre-stop:before {
+  content: "\e909";
+}
+.cre-library:before {
+  content: "\e90a";
+}
+.cre-snapchat:before {
+  content: "\e90d";
+}
+.cre-home:before {
+  content: "\f015";
+}
+.cre-tiktok:before {
+  content: "\e90e";
+}
+.cre-headphones:before {
+  content: "\e90b";
+}
+.cre-ellipsis-h:before {
+  content: "\e90c";
+}
+.cre-ellipsis-v:before {
+  content: "\e90f";
+}
+.cre-facebook:before {
+  content: "\ea90";
+}
+.cre-instagram:before {
+  content: "\ea92";
+}
+.cre-twitter:before {
+  content: "\ea96";
+}
+.cre-youtube:before {
+  content: "\ea9d";
+}
