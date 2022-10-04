@@ -10,7 +10,6 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<!-- <?php crefila_post_thumbnail(); ?> -->
 	<div class="entry-content">
 		<?php
 		the_content();
