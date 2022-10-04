@@ -11,13 +11,7 @@
 
 ?>
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info flex justify-end items-center p-4 px-9">
-			<a href="<?php echo get_site_url() ; ?>">
-				2022 CREFILA INC
-			</a>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
