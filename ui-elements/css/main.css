@@ -665,6 +665,10 @@ video {
   justify-content: flex-end;
 }
 
+.justify-center {
+  justify-content: center;
+}
+
 .truncate {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -821,5 +825,13 @@ ul.social-icons li i {
 @media (min-width: 768px) {
   .md\:hidden {
     display: none;
+  }
+
+  .md\:w-80 {
+    width: 20rem;
+  }
+
+  .md\:w-70\% {
+    width: 70%;
   }
 }
