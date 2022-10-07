@@ -1,6 +1,8 @@
 module.exports = {
     content: [
         "./**/*.{php,html}",
+		
+		"./src/**/*.{js,jsx,ts,tsx}",
         "./*.{php,html,js}",
         "./home.php"
     ],

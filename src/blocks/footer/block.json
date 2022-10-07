@@ -6,7 +6,7 @@
 	"title": "Crefila Footer",
 	"category": "widgets",
 	"icon": "smiley",
-	"description": "Example block scaffolded with Create Block tool.",
+	"description": "Display Crefila footer",
 	"supports": {
 		"html": false
 	},
